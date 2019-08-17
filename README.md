@@ -7,8 +7,8 @@ item has a price, a shipping cost and a rating.
 
 At the end: This code prints the coordinates of the selected items.
 e.g. – CategoryA:ItemX,CategoryB:ItemY, ….
-• Total cost, and
-• Sum of ratings of all the items that were picked.                                        
+* Total cost, and
+* Sum of ratings of all the items that were picked.                                        
 
 # Table of Contents
 
