@@ -53,6 +53,11 @@ public class ShoppingCartService {
 		return Integer.parseInt(basket_threshold);
 	}
 
+	/***
+	 * This method generated a list of Categories of size maxCategories, configurable
+	 * each category consists of Items(configurable via application.properties)
+	 * @return List of Categories
+	 */
 	public List<Category> generateAllItems(){
 		if(categories.isEmpty()) {
 			LOG.info("Shopping Cart creation started");
@@ -74,6 +79,11 @@ public class ShoppingCartService {
 		return categories;
 	}
 
+	/***
+	 * This method returns status of the basket
+	 * @return
+	 * @throws CartEmptyException
+	 */
 	public Basket getBasketStatus()throws CartEmptyException{
 		if(categories.isEmpty()) {
 			LOG.error("User searching item in empty cart");
@@ -83,6 +93,16 @@ public class ShoppingCartService {
 			return basket;
 	}
 
+	/***
+	 * This method invokes setBasket which adds an Item to the basket,
+	 * once it satisfies all checks
+	 *
+	 *
+	 * @param userSelection
+	 * @return
+	 * @throws MaximumCostException
+	 * @throws InvalidEntryException
+	 */
 	public String addtoBasket(UserSelection userSelection)
 			throws MaximumCostException, InvalidEntryException {
 
@@ -118,9 +138,12 @@ public class ShoppingCartService {
 			if(userSelection.getCategory().equals(b.getId())){
 				b.getItem().stream().forEach(i->{
 					if(userSelection.getItem().equals(i.getId())){
-						basket.setItem_coordinates(b.getId()+":"+i.getId() +" " + basket.getItem_coordinates());
-						basket.setTotal_cost(i.getShipping_cost() + i.getPrice() + basket.getTotal_cost());
-						basket.setTotal_rating(i.getRating() + basket.getTotal_rating());
+						basket.setItem_coordinates(b.getId()+":"+i.getId()
+								+" " + basket.getItem_coordinates());
+						basket.setTotal_cost(i.getShipping_cost() + i.getPrice()
+								+ basket.getTotal_cost());
+						basket.setTotal_rating(i.getRating() +
+								basket.getTotal_rating());
 						LOG.info("Item added successfully");
 					}
 				});
