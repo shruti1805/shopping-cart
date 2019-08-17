@@ -2,10 +2,11 @@ package com.au.model;
 
 public class Item {
     private String id;
-
     private int price;
     private int shipping_cost;
     private int rating;
+
+    private Item(){}
 
     public Item(int id){
         setPrice();

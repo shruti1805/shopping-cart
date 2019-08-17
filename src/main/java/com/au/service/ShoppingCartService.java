@@ -29,6 +29,17 @@ public class ShoppingCartService {
 
 	private static final Logger LOG = LoggerFactory.getLogger(ShoppingCartService.class);
 
+	private ShoppingCartService(){}
+
+	private static ShoppingCartService INSTANCE;
+
+	public static ShoppingCartService getInstance() {
+		if (INSTANCE == null) {
+			INSTANCE = new ShoppingCartService();
+		}
+		return INSTANCE;
+	}
+
 	@Value("${max.categories}")
 	private String maxCategories;
 

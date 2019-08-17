@@ -1,6 +1,5 @@
 package com.au.model;
 
-import javax.validation.constraints.Max;
 import java.util.List;
 
 public class Category {

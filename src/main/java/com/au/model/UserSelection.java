@@ -2,6 +2,8 @@ package com.au.model;
 
 public class UserSelection {
 
+    private UserSelection(){}
+
     public UserSelection(String category, String item) {
         this.category = category;
         this.item = item;

@@ -45,7 +45,7 @@ public class ShoppingServiceTest {
     @Value("{max.items}")
     private String maxItems;
 
-    final ShoppingCartService mock = Mockito.spy(new ShoppingCartService());
+    final ShoppingCartService mock = Mockito.spy(ShoppingCartService.getInstance());
     List<Category>  categories= new ArrayList();
 
 
@@ -124,7 +124,7 @@ public class ShoppingServiceTest {
         mock.addtoBasket(userSelection);
 
         try {
-            mock.checkAlreadyExists(userSelection); 
+            mock.checkAlreadyExists(userSelection);
         }catch (InvalidEntryException e){
             
             assertEquals(AllMessages.ALREADY_EXISTS.getMessage(), e.getMessage());
