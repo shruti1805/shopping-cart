@@ -50,5 +50,7 @@ Can be implemented with Crud repositories
 #Testing using Postman
 ![image](TestingUsingPostman.png)
 
+<img src="https://github.com/shruti1805/shopping-cart/TestingUsingPostman.png" height="204" width="408">
+
 
 ![image](TestingGet.png)    
