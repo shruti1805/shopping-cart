@@ -19,12 +19,9 @@ e.g. – CategoryA:ItemX,CategoryB:ItemY, ….
 # Installation
 No initial setup is required
 
-## Prerequisites
-
+# Prerequisites
 * java >= 1.8
 * maven 3.6.1
-
-### 
 
 # Requirements
 Implemented and tested using Java 8<br>
@@ -44,13 +41,9 @@ Can be implemented with Crud repositories
 # Test Cases Executed
 ![image](TestCases.png)
 
-#Code Coverage 90%
+# Code Coverage 90%
 ![image](CodeCoverage.png)
 
-#Testing using Postman
+# Testing using Postman
 ![image](TestingUsingPostman.png)
-
-<img src="https://github.com/shruti1805/shopping-cart/TestingUsingPostman.png" height="204" width="408">
-
-
 ![image](TestingGet.png)    
